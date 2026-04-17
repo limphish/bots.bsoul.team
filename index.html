@@ -304,17 +304,18 @@ function resize() {
 }
 
 let menuOpen = false;
-
 function toggleMenu() {
-    const menu = document.getElementById('menu');
+    const menu = document.getElementById('floating-menu');
     menuOpen = !menuOpen;
-
-    if (menuOpen) {
-        menu.classList.add('show');
+     if (menuOpen) {
+         menu.classList.add('show');
+         document.getElementById('fab-button').style.transform = 'rotate(135deg)';
     } else {
-        menu.classList.remove('show');
-    }
-}
+         menu.classList.remove('show');
+         document.getElementById('fab-button').style.transform = 'rotate(0deg)';
+     }
+ }
+
     
 function draw() {
     ctx.clearRect(0,0,canvas.width,canvas.height);
